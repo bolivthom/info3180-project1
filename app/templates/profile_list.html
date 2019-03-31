@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<div class="container">
+	<h1>Profiles</h1>
+
+	<div class="collection">
+        {% for profile in profile_list %}
+        <div class="card blue-top-box profile-list-card">
+            <div class="row">
+                <div class="col-md-3 profile-list-picture">
+                    <img src="{{ '/static/uploads/' + profile.photo }}" />
+                </div>
+                <div class="col-md-5 profile-list-summary">
+                    <h4>{{ profile.first_name }} {{ profile.last_name }}</h4>
+                    <span>
+                        <i class="far fa-user"></i>
+                        <p>{{ 'Male' if profile.gender == 'm' else 'Female' }}</p>
+                    </span>
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>{{ profile.location }}</p>
+                    </span>
+                </div>
+                <div class="col-md-4 profile-list-action">
+                    <a 
+                        href="{{ url_for('profile', userid=profile.id)}}" 
+                        class="btn btn-primary green-btn collection-item"
+                    >View Profile</a>
+                </div>
+            </div>
+        </div>
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock %}

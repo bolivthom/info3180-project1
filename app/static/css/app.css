@@ -1,0 +1,89 @@
+body {
+    padding-top: 5rem;
+    background-color: #8abedd75;
+}
+
+.blue-top-box {
+    border: 0;
+    border-top: 4px blue solid;
+}
+
+.profile-list-card .row {
+    height: 200px;
+}
+
+.profile-form-container {
+    padding: 25px;
+}
+
+.green-btn {
+    background: limegreen;
+    border-color: limegreen;
+}
+
+.profile-list-picture img,
+.profile-detail-picture img {
+    height: auto;
+    display: flex;
+    padding: 15px;
+    max-width: 100%;
+    max-height: 200px;
+    justify-content: center;
+}
+
+.profile-list-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-list-summary {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-detail-summary-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-detail-summary {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-list-summary p,
+.profile-detail-summary p {
+    margin: 0;
+    display: contents;
+    color: gray;
+}
+
+
+.profile-list-summary span,
+.profile-detail-summary span {
+    display: block;
+}
+
+.profile-detail-actions {
+    display: flex;
+    margin: 15px 35px;
+    justify-content: space-evenly;
+}
+
+.profile-detail-actions button {
+    flex-grow: 1;
+    width: 200px;
+    margin: 0 40px;
+}
+
+#photo {
+    border: 0;
+    padding: 0;
+}
+
+.btn-upload {
+    display: block;
+}

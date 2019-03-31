@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="card blue-top-box">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6 profile-detail-picture">
+            <img src="{{ '/static/uploads/' + profile.photo }}" />
+        </div>
+        <div class="col-md-6 profile-detail-summary-container">
+            <div class="profile-detail-summary">
+                <h4>{{ profile.first_name }} {{ profile.last_name }}</h4>
+                <span>
+                    <i class="far fa-envelope"></i>
+                    <p>{{ profile.email }}</p>
+                </span>
+                <span>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>{{ profile.location }}</p>
+                </span>
+                <span>
+                    <i class="far fa-calendar"></i>
+                    <p>Join on {{ format_date(profile.created_at) }}</p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 profile-detail-summary">
+            <h5>About Me</h5>
+            <p>{{ profile.biography }}</p>
+        </div>
+    </div>
+    <div class="row profile-detail-actions">
+        <button class="btn btn-primary green-btn">Send Message</button>
+        <button class="btn btn-primary">Follow</button>
+    </div>
+
+</div>
+{% endblock %}
