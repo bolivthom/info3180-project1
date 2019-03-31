@@ -8,9 +8,8 @@ UPLOAD_FOLDER = 'app/static/uploads'
 
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db' # 'mysql://root:root@localhost/flask_profile'
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://project1:password@localhost/project1'
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # This is just here to suppress a warning from SQLAlchemy as it will soon be removed
 app.config['SECRET_KEY'] = SECRET_KEY
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
